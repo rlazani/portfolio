@@ -113,7 +113,9 @@ body {
   color: var(--clr-grey-2);
   line-height: 1.5;
   font-size: 0.875rem;
+  overflow-y: hidden;
 }
+
 ul {
   list-style-type: none;
 }
@@ -166,10 +168,36 @@ h4 {
   width: 100%;
   display: block;
 }
+
+/*
+=============== 
+Animation
+===============
+*/
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+=============== 
+Body
+===============
+*/
+
 .contato {
   background-color: var(--clr-blue-5);
   display: flex;
   justify-content: center;
+  height: 6vh;
 }
 .contato__lista {
   display: flex;
@@ -183,13 +211,14 @@ h4 {
   color: var(--clr-white);
   font-size: 1.5rem;
   transition: all 0.3s ease-in-out;
+  animation: show 1.5s ease-in-out 1;
 }
 .social__icon:hover {
   color: var(--clr-blue-2);
   transform: translate(0px, -2px);
 }
 main {
-  height: 93vh;
+  height: 94vh;
   display: flex;
   flex-direction: column;
   padding: 5rem 5rem;
@@ -218,6 +247,7 @@ main {
   font-weight: 700;
   color: var(--clr-grey-9);
   font-size: 4rem;
+  animation: show 1.5s ease-in-out 1;
 }
 .header__h2 {
   font-family: Montserrat;
@@ -226,6 +256,7 @@ main {
   color: var(--clr-blue-7);
   font-size: 1.3rem;
   margin-bottom: 2rem;
+  animation: show 1.5s ease-in-out 1;
 }
 
 .header__button {
@@ -240,20 +271,24 @@ main {
   font-weight: 700;
   color: var(--clr-blue-7);
   font-size: 1rem;
+  animation: show 1.5s ease-in-out 1;
 }
 .header__button:hover {
   opacity: 80%;
   cursor: pointer;
+  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
 }
 
 .info {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: show 1.5s ease-in-out 1;
 }
+
 .info div {
   border: solid var(--clr-blue-2) 1px;
-  height: 35vh;
+  height: 33vh;
   width: 25%;
   border-radius: 20px;
   display: flex;
@@ -261,7 +296,7 @@ main {
   justify-content: center;
   align-items: center;
   margin: 0 4rem;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .info__h3 {
@@ -269,6 +304,7 @@ main {
   font-weight: 700;
   color: var(--clr-blue-7);
   font-size: 2.5rem;
+  animation: show 1.5s ease-in-out 1;
 }
 
 .projetos {
@@ -277,10 +313,6 @@ main {
   background-position: 10% 30%; /* Center the background image */
   background-repeat: no-repeat; /* Do not repeat the background image */
   position: relative;
-}
-
-.projetos::after {
-  transition: all 1s ease-in-out;
 }
 
 .projetos:hover::after,
@@ -296,15 +328,22 @@ main {
   border-radius: 20px;
 }
 
+.conhecimentos {
+  background-image: url("img/livros_dois.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .projetos:hover,
 .conhecimentos:hover {
   cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
 }
 
-.conhecimentos {
-  background-image: url("img/livros_dois.jpg"); /* Replace 'your-image-url.jpg' with the actual URL of your image */
-  background-size: cover; /* Adjust the background size to cover the entire div */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the background image */
-  position: relative;
+.projetos:hover h3,
+.conhecimentos:hover h3 {
+  color: var(--clr-blue-5);
 }
