@@ -1,0 +1,310 @@
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(21, 91%, 17%);
+  --clr-primary-2: hsl(21, 84%, 25%);
+  --clr-primary-3: hsl(21, 81%, 29%);
+  --clr-primary-4: hsl(21, 77%, 34%);
+  /* primary/main color */
+  --clr-primary-5: hsl(21, 62%, 45%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(21, 57%, 50%);
+  --clr-primary-7: hsl(21, 65%, 59%);
+  --clr-primary-8: hsl(21, 80%, 74%);
+  --clr-primary-9: hsl(21, 94%, 87%);
+  --clr-primary-10: hsl(21, 100%, 94%);
+  /* darkest grey - used for headings */
+
+  /* grey used for paragraphs */
+
+  --clr-white: #fff;
+  --clr-black: #222;
+
+  --clr-grey-0: #fafafa;
+  --clr-grey-1: #f5f5f5;
+  --clr-grey-2: #eeeeee;
+  --clr-grey-3: #e0e0e0;
+  --clr-grey-4: #bdbdbd;
+  --clr-grey-5: #9e9e9e;
+  --clr-grey-6: #757577;
+  --clr-grey-7: #616161;
+  --clr-grey-8: #424242;
+  --clr-grey-9: #212121;
+
+  /* $brown-0: #efebe9; */
+  --clr-brown-0: #f8f7f6;
+  --clr-brown-1: #d7ccc8;
+  --clr-brown-2: #bcaaa4;
+  --clr-brown-3: #a1887f;
+  --clr-brown-4: #8d6e63;
+  --clr-brown-5: #795548;
+  --clr-brown-6: #6d4c41;
+  --clr-brown-7: #5d4037;
+  --clr-brown-8: #4e342e;
+  --clr-brown-9: #3e2723;
+
+  --clr-green-0: #e8f5e9;
+  --clr-green-1: #c8e6c9;
+  --clr-green-2: #a5d6a7;
+  --clr-green-3: #81c784;
+  --clr-green-4: #66bb6a;
+  --clr-green-5: #4caf50;
+  --clr-green-6: #43a047;
+  --clr-green-7: #388e3c;
+  --clr-green-8: #2e7d32;
+  --clr-green-9: #1b5e20;
+
+  --clr-orange-0: #fbe9e7;
+  --clr-orange-1: #ffccbc;
+  --clr-orange-2: #ffab91;
+  --clr-orange-3: #ff8a65;
+  --clr-orange-4: #ff7043;
+  --clr-orange-5: #ff5722;
+  --clr-orange-6: #f4511e;
+  --clr-orange-7: #e64a19;
+  --clr-orange-8: #d84315;
+  --clr-orange-9: #bf360c;
+
+  --clr-yellow-0: #fff8e1;
+  --clr-yellow-1: #ffecb3;
+  --clr-yellow-2: #ffe082;
+  --clr-yellow-3: #ffd54f;
+  --clr-yellow-4: #ffca28;
+  --clr-yellow-5: #ffc107;
+  --clr-yellow-6: #ffb300;
+  --clr-yellow-7: #ffa000;
+  --clr-yellow-8: #ff8f00;
+  --clr-yellow-9: #ff6f00;
+
+  --clr-blue-0: #e3f2fd;
+  --clr-blue-1: #bbdefb;
+  --clr-blue-2: #90caf9;
+  --clr-blue-3: #64b5f6;
+  --clr-blue-4: #42a5f5;
+  --clr-blue-5: #2196f3;
+  --clr-blue-6: #1e88e5;
+  --clr-blue-7: #1976d2;
+  --clr-blue-8: #1565c0;
+  --clr-blue-9: #0d47a1;
+
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Montserrat;
+  background: var(--clr-white);
+  color: var(--clr-grey-2);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1rem;
+}
+body {
+  font-size: 1rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+.contato {
+  background-color: var(--clr-blue-5);
+  display: flex;
+  justify-content: center;
+}
+.contato__lista {
+  display: flex;
+  /*   border: 1px solid white; */
+  padding: 1rem;
+  width: 20rem;
+  justify-content: space-around;
+  transition: all 0.3s;
+}
+.social__icon {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.social__icon:hover {
+  color: var(--clr-blue-2);
+  transform: translate(0px, -2px);
+}
+main {
+  height: 93vh;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 5rem;
+  text-align: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #d7e9fb,
+    #d0e7f1,
+    #cee3e6,
+    #d0dfdc,
+    #d2dad5,
+    #d1d7d3,
+    #d0d5d2,
+    #cfd2d0,
+    #cdd1d0,
+    #ccd0d0,
+    #cbced0,
+    #cacdcf
+  );
+}
+.header {
+  padding: 3rem 0 1rem 0;
+}
+.header__h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  color: var(--clr-grey-9);
+  font-size: 4rem;
+}
+.header__h2 {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--clr-blue-7);
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  margin: 3rem auto;
+  background-color: var(--clr-grey-3);
+  border: solid var(--clr-blue-5) 1px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-family: Montserrat;
+  font-weight: 700;
+  color: var(--clr-blue-7);
+  font-size: 1rem;
+}
+.header__button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info div {
+  border: solid var(--clr-blue-2) 1px;
+  height: 35vh;
+  width: 25%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 4rem;
+  transition: all 1s ease-in-out;
+}
+
+.info__h3 {
+  font-family: Montserrat;
+  font-weight: 700;
+  color: var(--clr-blue-7);
+  font-size: 2.5rem;
+}
+
+.projetos {
+  background-image: url("img/projetos.jpg"); /* Replace 'your-image-url.jpg' with the actual URL of your image */
+  background-size: cover; /* Adjust the background size to cover the entire div */
+  background-position: 10% 30%; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  position: relative;
+}
+
+.projetos::after {
+  transition: all 1s ease-in-out;
+}
+
+.projetos:hover::after,
+.conhecimentos:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 175, 249, 0.444);
+  border-radius: 20px;
+}
+
+.projetos:hover,
+.conhecimentos:hover {
+  cursor: pointer;
+}
+
+.conhecimentos {
+  background-image: url("img/livros_dois.jpg"); /* Replace 'your-image-url.jpg' with the actual URL of your image */
+  background-size: cover; /* Adjust the background size to cover the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  position: relative;
+}
