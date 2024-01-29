@@ -24,6 +24,7 @@ abrirModals.forEach(function (modal) {
       status.mudarStatusProjetos();
     }
     mainBlur.classList.toggle("blur");
+    mainBlur.classList.toggle("esconderResponsivo");
   });
 });
 

@@ -1,7 +1,7 @@
 let projetosAberto = false;
 let conhecimentosAberto = false;
 
-console.log(`Inicio: ${projetosAberto}`);
+
 
 const lerStatus = () => {
   console.log("lendo status");

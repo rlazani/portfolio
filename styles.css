@@ -224,6 +224,7 @@ Modal
 .blur {
   filter: blur(20px);
   opacity: 50%;
+  display: none;
 }
 
 .arrow {
@@ -309,6 +310,10 @@ Modal
   display: none;
 }
 
+.esconderResponsivo {
+  display: none;
+}
+
 @media screen and (max-width: 1800px) {
   .modal {
     width: 100%;
@@ -328,7 +333,6 @@ Modal
   .modal {
     padding: 1rem 2rem;
     height: auto;
-    position: static;
   }
 
   .div__lista {

@@ -18,6 +18,7 @@ const fecharModal = () => {
     displayConhecimentos.classList.add("hide");
     status.mudarStatusConhecimentos();
     mainBlur.classList.remove("blur");
+    mainBlur.classList.remove("esconderResponsivo");
   }
 };
 
