@@ -1,6 +1,8 @@
+import { dataProjetos, dataConhecimentos } from "./dataModal.js";
+
 export class Modal {
   constructor() {
-    // Abertura (30/01):
+    // Abertura:
 
     this.linkProjetos.addEventListener("click", this.abrirModal.bind(this));
     this.linkConhecimentos.addEventListener(
@@ -30,6 +32,8 @@ export class Modal {
   abrirModals = document.querySelectorAll(".abrirModals");
   arrowProjetos = document.getElementById("arrowProjetos");
   arrowConhecimentos = document.getElementById("arrowConhecimentos");
+  listaProjetos = document.getElementById("lista-projetos");
+  listaConhecimentos = document.getElementById("lista-conhecimentos");
 
   // Gerenciamento de status do Modal:
   projetosAberto = false;
@@ -63,6 +67,8 @@ export class Modal {
     }
   };
 
+  // Abrir e Fechar
+
   abrirModal = (e) => {
     const displayTarget = e.currentTarget.id;
     console.log(displayTarget);
@@ -70,6 +76,8 @@ export class Modal {
       this.displayProjetos.classList.remove("hide");
       this.mudarStatusProjetos();
       this.mainBlur.classList.add("blur");
+      // Insere o HTML criado no template renderizado
+      this.listaProjetos.innerHTML = this.criarHTMLProjetos();
     } else if (
       this.getConhecimentoAberto() === false &&
       displayTarget === "conhecimentos"
@@ -77,25 +85,77 @@ export class Modal {
       this.displayConhecimentos.classList.remove("hide");
       this.mudarStatusConhecimentos();
       this.mainBlur.classList.add("blur");
+      // Insere o HTML criado no template renderizado
+      //this.listaProjetos.innerHTML = this.criarHTMLProjetos();
+      this.criarHTMLConhecimentos();
     }
   };
 
   fecharModal = () => {
-    console.log("fechando o modal na classe@@@");
     // Fechar o modal
     if (this.getProjetoAberto() === true) {
-      console.log("projeto está aberto%%%");
       this.displayProjetos.classList.add("hide");
       this.mudarStatusProjetos();
       this.mainBlur.classList.remove("blur");
-      console.log(`Fim e ${this.getProjetoAberto()}`);
+      this.listaProjetos = "";
     } else if (this.getConhecimentoAberto() === true) {
       this.displayConhecimentos.classList.add("hide");
       this.mudarStatusConhecimentos();
       this.mainBlur.classList.remove("blur");
       this.mainBlur.classList.remove("esconderResponsivo");
+      this.listaConhecimentos = "";
     }
   };
-} // Fechamento da Classe
 
-// Fechar Modal:
+  // criar HTML:
+
+  criarHTMLProjetos = () => {
+    let renderizacaoProjetos = dataProjetos.map((projeto) => {
+      const { titulo, descricao, link, github } = projeto;
+      return `
+        <li>
+          <h3 class="titulo">${titulo}</h3>
+           <p class="descricao">
+            ${descricao}
+          </p>
+          <div class="links">
+            <a href="${link}" target="_blank">
+              <button class="visitar">Visitar</button>
+              </a>
+              <a
+                href="https://github.com/rlazani"
+                target="_blank"
+                class="nav-icon"
+              >
+              </a>
+              <i class="fa-brands fa-github social__icon"></i>
+            </a>
+          </div>
+        </li>
+      `;
+    });
+    renderizacaoProjetos = renderizacaoProjetos.join("");
+    return renderizacaoProjetos;
+  };
+
+  criarHTMLConhecimentos = () => {
+    dataConhecimentos.forEach((el) => {
+      //Criando o título:
+      const li = document.createElement("li");
+      li.classList.add("elemento-lista");
+      const h3 = document.createElement("h3");
+      h3.classList.add("titulo");
+      h3.textContent = el.titulo;
+      li.append(h3);
+      const ul = document.createElement("ul");
+      ul.classList.add("ul__conhecimentos");
+      // Iteração sob os itens:
+      el.itens.forEach((item) => {
+        const liItem = document.createElement("li");
+        liItem.textContent = item;
+        li.append(liItem);
+      });
+      this.listaConhecimentos.append(li);
+    });
+  };
+} // Fechamento da Classe

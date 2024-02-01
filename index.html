@@ -23,115 +23,21 @@
     />
   </head>
   <body>
-   
     <section class="modal hide" id="display__projetos">
       <div class="arrow" id="arrowProjetos">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <ul class="lista">
-       <div class="div__lista">
-         <li>
-          <h3 class="titulo">Observatório da Criança e Adolescente</h3>
-           <p class="descricao">
-            Desenvolvido com PHP e Jquery durante estágio na Unicamp
-          </p>
-
-          <div class="links">
-            <a href="https://oia.nepp.unicamp.br/" target="_blank">
-              <button class="visitar">Visitar</button>
-              </a>
-              <a
-                href="https://github.com/rlazani"
-                target="_blank"
-                class="nav-icon"
-              >
-              </a>
-              <i class="fa-brands fa-github social__icon"></i>
-            </a>
-          </div>
-          
-        </li>
-        <li>
-         <h3 class="titulo">Núcleo de Estudos de Políticas Públicas</h3>
-          <p class="descricao">
-            Parte de Front end desenvolvida durante estágio na Unicamp
-          </p>
-
-          <div class="links">
-            <a href="https://main.d2d5rz3i1z04d5.amplifyapp.com/index.html" target="_blank">
-              <button class="visitar">Visitar</button>
-              </a>
-              <a
-                href="https://github.com/rlazani"
-                target="_blank"
-                class="nav-icon"
-              >
-              </a>
-              <i class="fa-brands fa-github social__icon"></i>
-            </a>
-          </div>
-        </li>
-        </div>
-
-        <div class="div__lista">
-        <li>
-          <h3 class="titulo">Enctrl</h3>
-          <p class="descricao">
-            Protótipo entregue durante o Hacktown Patronos 2022 (classificado em terceiro lugar)
-          </p>
-
-          <div class="links">
-            <a href="https://main.d2rq02l8b3g62m.amplifyapp.com/#" target="_blank">
-              <button class="visitar">Visitar</button>
-              </a>
-             <a
-                href="https://github.com/rlazani"
-                target="_blank"
-                class="nav-icon"
-              >
-              </a>
-              <i class="fa-brands fa-github social__icon"></i>
-            </a>
-            <a
-                href="https://github.com/rlazani"
-                target="_blank"
-                class="nav-icon"
-              >
-             
-          </div>
-        </li>
-        <li>
-          <h3 class="titulo">Pesquisadores Indígenas</h3>
-          <p class="descricao">
-            Encontro de pesquisadores indígenas, demanda durante vigência de bolsa de jornalismo científico Fapesp
-          </p>
-
-          <div class="links">
-            <a href="http://pesquisadoresindigenas.com/" target="_blank">
-              <button class="visitar">Visitar</button>
-              </a>
-              <a
-                href="https://github.com/rlazani"
-                target="_blank"
-                class="nav-icon"
-              >
-              </a>
-              <i class="fa-brands fa-github social__icon"></i>
-            </a>
-          </div>
-        </li>
+      <div class="inner-modal">
+        <ul id="lista-projetos"></ul>
       </div>
-          
-      </ul>
     </section>
 
     <section class="modal hide" id="display__conhecimentos">
       <div class="arrow" id="arrowConhecimentos">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <ul class="lista">
-       <div class="div__lista">
-         <li>
+      <ul id="lista-conhecimentos">
+        <!--  <li class="elemento-lista">
           <h3 class="titulo">CSS</h3>
           <ul class="ul__conhecimentos">
             <li>Unidades</li>
@@ -141,7 +47,7 @@
             <li>Grid</li>
           </ul>
         </li>
-         <li>
+        <li class="elemento-lista">
           <h3 class="titulo">JavaScript</h3>
           <ul class="ul__conhecimentos">
             <li>DOM</li>
@@ -156,7 +62,7 @@
             <li>MVC</li>
           </ul>
         </li>
-          <li>
+        <li class="elemento-lista">
           <h3 class="titulo">Angular</h3>
           <ul class="ul__conhecimentos">
             <li>Components</li>
@@ -166,10 +72,8 @@
             <li>Routing</li>
           </ul>
         </li>
-        </div>
 
-       <div class="div__lista">
-         <li>
+        <li class="elemento-lista">
           <h3 class="titulo">SQL</h3>
           <ul class="ul__conhecimentos">
             <li>DDL, DML, DCL, TCL</li>
@@ -181,7 +85,7 @@
             <li>Views</li>
           </ul>
         </li>
-         <li>
+        <li class="elemento-lista">
           <h3 class="titulo">Git</h3>
           <ul class="ul__conhecimentos">
             <li>Commits</li>
@@ -189,7 +93,7 @@
             <li>Github</li>
           </ul>
         </li>
-          <li>
+        <li class="elemento-lista">
           <h3 class="titulo">Java</h3>
           <ul class="ul__conhecimentos">
             <li>Classes e Objetos</li>
@@ -199,69 +103,68 @@
             <li>Collections</li>
             <li>JDBC</li>
           </ul>
-        </li>
-        </div>
+        </li> -->
+      </ul>
+    </section>
 
-   
-          
-      </ul>
-    </section>
-   
     <div class="mainBlur">
-    <section class="contato">
-      <ul class="contato__lista">
-        <li>
-          <a
-            href="https://www.linkedin.com/in/rodrigo-lazani-b863381b7/"
-            target="_blank"
-            class="nav-icon"
-          >
-            <i class="fa-brands fa-linkedin social__icon"></i>
-          </a>
-        </li>
-        <li class="contato__itens">
-          <a href="https://github.com/rlazani" target="_blank" class="nav-icon">
-            <i class="fa-brands fa-github social__icon"></i>
-          </a>
-        </li>
-        <li class="contato__itens">
-          <a
-            href="mailto:rlazani@hotmail.com?"
-            target="_top"
-            target="_blank"
-            class="nav-icon"
-          >
-            <i class="fa-regular fa-envelope social__icon"></i>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <main>
-      <header class="header">
-        <h1 class="header__h1">Rodrigo Lazani</h1>
-        <h3 class="header__h2">Desenvolvedor de Sistemas</h3>
-        <a href="curriculo.pdf" download="curriculo.pdf">
-          <button class="header__button">
-            Currículo <br />
-            <img
-              class="curriculo__simbolo"
-              src="img/download.svg"
-              alt="simbolo"
-            />
-          </button>
-        </a>
-      </header>
-      <section class="info">
-        <div class="abrirModals" id="projetos">
-          <h3 class="info__h3">Projetos</h3>
-        </div>
-        <div class="abrirModals" id="conhecimentos">
-          <h3 class="info__h3">Conhecimentos</h3>
-        </div>
+      <section class="contato">
+        <ul class="contato__lista">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rodrigo-lazani-b863381b7/"
+              target="_blank"
+              class="nav-icon"
+            >
+              <i class="fa-brands fa-linkedin social__icon"></i>
+            </a>
+          </li>
+          <li class="contato__itens">
+            <a
+              href="https://github.com/rlazani"
+              target="_blank"
+              class="nav-icon"
+            >
+              <i class="fa-brands fa-github social__icon"></i>
+            </a>
+          </li>
+          <li class="contato__itens">
+            <a
+              href="mailto:rlazani@hotmail.com?"
+              target="_top"
+              target="_blank"
+              class="nav-icon"
+            >
+              <i class="fa-regular fa-envelope social__icon"></i>
+            </a>
+          </li>
+        </ul>
       </section>
-    </main>
+      <main>
+        <header class="header">
+          <h1 class="header__h1">Rodrigo Lazani</h1>
+          <h3 class="header__h2">Desenvolvedor de Sistemas</h3>
+          <a href="curriculo.pdf" download="curriculo.pdf">
+            <button class="header__button">
+              Currículo <br />
+              <img
+                class="curriculo__simbolo"
+                src="img/download.svg"
+                alt="simbolo"
+              />
+            </button>
+          </a>
+        </header>
+        <section class="info">
+          <div class="abrirModals" id="projetos">
+            <h3 class="info__h3">Projetos</h3>
+          </div>
+          <div class="abrirModals" id="conhecimentos">
+            <h3 class="info__h3">Conhecimentos</h3>
+          </div>
+        </section>
+      </main>
     </div>
-    
   </body>
   <script src="index.js" type="module"></script>
 </html>
