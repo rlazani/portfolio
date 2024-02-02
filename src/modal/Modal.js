@@ -97,13 +97,13 @@ export class Modal {
       this.displayProjetos.classList.add("hide");
       this.mudarStatusProjetos();
       this.mainBlur.classList.remove("blur");
-      this.listaProjetos = "";
+      this.listaProjetos.innerHTML = " ";
     } else if (this.getConhecimentoAberto() === true) {
       this.displayConhecimentos.classList.add("hide");
       this.mudarStatusConhecimentos();
       this.mainBlur.classList.remove("blur");
       this.mainBlur.classList.remove("esconderResponsivo");
-      this.listaConhecimentos = "";
+      this.listaConhecimentos.innerHTML = " ";
     }
   };
 
