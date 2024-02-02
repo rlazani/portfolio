@@ -3,12 +3,6 @@ import { dataProjetos, dataConhecimentos } from "./dataModal.js";
 export class Modal {
   constructor() {
     // Abertura:
-
-    this.linkProjetos.addEventListener("click", this.abrirModal.bind(this));
-    this.linkConhecimentos.addEventListener(
-      "click",
-      this.abrirModal.bind(this)
-    );
     // Fechamento:
     this.arrowConhecimentos.addEventListener(
       "click",
@@ -17,18 +11,13 @@ export class Modal {
     this.arrowProjetos.addEventListener("click", this.fecharModal.bind(this));
   }
 
-  logiTeste = () => {
-    console.log("Classe funcionando!!!");
-    console.log(this.displayProjetos);
-  };
-
   // Event Listeners (Controller):
-  // Propriedades que captam os event listeners:
+  // Propriedades passadas  aos event listeners:
   displayProjetos = document.getElementById("display__projetos");
   displayConhecimentos = document.getElementById("display__conhecimentos");
-  linkProjetos = document.getElementById("projetos");
-  linkConhecimentos = document.getElementById("conhecimentos");
+
   mainBlur = document.querySelector(".mainBlur");
+  arrow = document.querySelectorAll(".arrow");
   abrirModals = document.querySelectorAll(".abrirModals");
   arrowProjetos = document.getElementById("arrowProjetos");
   arrowConhecimentos = document.getElementById("arrowConhecimentos");
@@ -67,7 +56,7 @@ export class Modal {
     }
   };
 
-  // Abrir e Fechar
+  // Abrir e Fechar (View)
 
   abrirModal = (e) => {
     const displayTarget = e.currentTarget.id;
@@ -93,6 +82,7 @@ export class Modal {
 
   fecharModal = () => {
     // Fechar o modal
+    // Para deixar a classe única, usar o mesmo seletor para as ambas
     if (this.getProjetoAberto() === true) {
       this.displayProjetos.classList.add("hide");
       this.mudarStatusProjetos();

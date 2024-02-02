@@ -1,7 +1,3 @@
-//import "./src/modal/abrirModal.js";
-//import "./src/modal/fecharModal.js";
-import { Modal } from "./src/modal/Modal.js";
+import { initModal } from "./src/modal/Controller.js";
 
-const testeModal = new Modal();
-
-//testeModal.logiTeste();
+initModal();
