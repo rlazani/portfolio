@@ -1,36 +1,20 @@
 import { dataProjetos, dataConhecimentos } from "./dataModal.js";
 
 export class Modal {
-  constructor() {
-    // Abertura:
-    // Fechamento:
-    this.arrowConhecimentos.addEventListener(
-      "click",
-      this.fecharModal.bind(this)
-    );
-    this.arrowProjetos.addEventListener("click", this.fecharModal.bind(this));
-  }
-
   // Event Listeners (Controller):
   // Propriedades passadas  aos event listeners:
+
   displayProjetos = document.getElementById("display__projetos");
   displayConhecimentos = document.getElementById("display__conhecimentos");
 
   mainBlur = document.querySelector(".mainBlur");
-  arrow = document.querySelectorAll(".arrow");
-  abrirModals = document.querySelectorAll(".abrirModals");
-  arrowProjetos = document.getElementById("arrowProjetos");
-  arrowConhecimentos = document.getElementById("arrowConhecimentos");
+
   listaProjetos = document.getElementById("lista-projetos");
   listaConhecimentos = document.getElementById("lista-conhecimentos");
 
   // Gerenciamento de status do Modal:
   projetosAberto = false;
   conhecimentosAberto = false;
-
-  lerStatus = () => {
-    console.log("lendo status");
-  };
 
   getProjetoAberto = () => {
     return this.projetosAberto;
@@ -81,8 +65,6 @@ export class Modal {
   };
 
   fecharModal = () => {
-    // Fechar o modal
-    // Para deixar a classe única, usar o mesmo seletor para as ambas
     if (this.getProjetoAberto() === true) {
       this.displayProjetos.classList.add("hide");
       this.mudarStatusProjetos();
