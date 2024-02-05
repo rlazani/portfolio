@@ -4,7 +4,6 @@ export class Menu {
   menuRender = () => {};
   setMenuData = (menu) => {
     this.menuData = menu;
-    console.log(this.menuData);
   };
   criarHtmlMenu = () => {
     let renderizacaoMenu = this.menuData.map((item) => {

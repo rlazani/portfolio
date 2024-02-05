@@ -11,5 +11,4 @@ export const initMenu = () => {
   const objeto = new Menu();
   objeto.setMenuData(menuData);
   contato__lista.innerHTML = objeto.criarHtmlMenu();
-  console.log(contato__lista.innerHTML);
 };
