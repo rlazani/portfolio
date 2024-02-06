@@ -1,7 +1,7 @@
-export class Menu {
+export class View {
   constructor() {}
   menuData;
-  menuRender = () => {};
+
   setMenuData = (menu) => {
     this.menuData = menu;
   };
