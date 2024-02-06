@@ -1,3 +1,4 @@
+// O array dataProjetos deveria ser passado pelo Controller
 import { dataProjetos, dataConhecimentos } from "./dataModal.js";
 
 export class Modal {
@@ -44,7 +45,6 @@ export class Modal {
 
   abrirModal = (e) => {
     const displayTarget = e.currentTarget.id;
-    console.log(displayTarget);
     if (this.getProjetoAberto() === false && displayTarget === "projetos") {
       this.displayProjetos.classList.remove("hide");
       this.mudarStatusProjetos();
