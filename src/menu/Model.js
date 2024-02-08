@@ -18,7 +18,6 @@ export class Model {
     }
   }
   fetchArray() {
-    console.log("fetching data###");
     this.data = backupData;
   }
 }

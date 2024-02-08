@@ -198,7 +198,8 @@ Modal
 ===============
 */
 
-.modal {
+.modalProjetos,
+.modalConhecimentos {
   position: fixed;
   top: 0;
   left: 0;
@@ -221,7 +222,8 @@ Modal
   display: none;
 }
 
-.arrow {
+.arrow__projetos,
+.arrow__conhecimentos {
   color: var(--clr-white);
   font-size: 1.5rem;
   margin-left: 92%;
@@ -307,29 +309,29 @@ Modal
   align-items: center;
 }
 
-.modal p {
+.modalProjetos p,
+.modalConhecimentos p {
   color: var(--clr-grey-7);
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
   animation: show 1.5s ease-in-out 1;
 }
 
-.modal h3 {
+.modalProjetos h3,
+.modalConhecimentos h3 {
   color: var(--clr-white);
   transition: all 0.3s ease-in-out;
   animation: show 1.5s ease-in-out 1;
 }
 
-.hide {
-  display: none;
-}
-
-.esconderResponsivo {
+.hideProjetos,
+.hideConhecimentos {
   display: none;
 }
 
 @media screen and (max-width: 1800px) {
-  .modal {
+  .modalProjetos,
+  .modalConhecimentos {
     width: 100%;
     min-height: 100%;
     padding: 5rem;
@@ -337,7 +339,8 @@ Modal
 }
 
 @media screen and (max-width: 1100px) {
-  .modal {
+  .modalProjetos,
+  .modalConhecimentos {
     /* background-color: var(--clr-orange-9); */
     padding: 2rem;
   }
@@ -372,7 +375,8 @@ Modal
 }
 
 @media screen and (max-width: 870px) {
-  .modal {
+  .modalProjetos,
+  .modalConhecimentos {
     /*   background-color: var(--clr-green-9); */
     padding: 1rem 2rem;
     height: auto;
@@ -380,7 +384,8 @@ Modal
     padding: 2rem 0rem;
   }
 
-  .modal h3 {
+  .modalProjetos,
+  .modalConhecimentos h3 {
     font-size: 1.6rem;
   }
 
@@ -401,10 +406,11 @@ Modal
 
   #lista-conhecimentos {
     margin: 0 auto;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
+    border: 1px solid var(--clr-orange-0);
   }
 
   .elemento-lista {
@@ -429,7 +435,8 @@ Modal
 }
 
 @media screen and (max-width: 570px) {
-  .modal {
+  .modalProjetos,
+  .modalConhecimentos {
     /*  background: var(--clr-brown-7); */
     padding: 0;
   }

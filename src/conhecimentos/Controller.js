@@ -1,9 +1,7 @@
-// import { View } from "./View.js";
 import { Model } from "./Model.js";
 import { View } from "./View.js";
-// Tarefas: a- buscar dados do Model, b- chamar renderização da View (gerenciar)
 
-export class ControllerProjetos {
+export class ControllerConhecimentos {
   dadosModel;
   constructor() {
     // Model:
