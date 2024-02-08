@@ -32,13 +32,12 @@ export class View {
               <button class="visitar">Visitar</button>
               </a>
               <a
-                href="https://github.com/rlazani"
+                href="${github}"
                 target="_blank"
                 class="nav-icon"
               >
+               <i class="fa-brands fa-github social__icon"></i>
               </a>
-              <i class="fa-brands fa-github social__icon"></i>
-            </a>
           </div>
         </li>
       `;
