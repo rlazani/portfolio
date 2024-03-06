@@ -590,7 +590,7 @@ Informações
 
 .experiencia_ul {
   list-style-type: none;
-  margin-top: 2rem;
+  margin: 2rem 0rem;
   border: var(--clr-grey-2) 1px solid;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
@@ -599,7 +599,7 @@ Informações
 }
 
 .experiencia_li {
-  padding: 1rem 0;
+  padding: 2rem 1rem;
   border-bottom: var(--clr-grey-2) 1px solid;
   color: #555;
   font-size: 1.2rem;
@@ -612,7 +612,7 @@ li strong {
   font-weight: bold;
 }
 .experiencia_li:hover {
-  background-color: var(--clr-grey-3);
+  background-color: var(--clr-blue-1);
   box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
 }
 
@@ -624,15 +624,16 @@ Projetos
 
 .projetos {
   margin: 6rem auto 0 auto;
-  width: 80%;
+  /* width: 80%; */
   transition: all 0.3s ease-in-out;
   animation: show 1.5s ease-in-out 1;
 }
 .projetos_div {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   justify-content: center;
+  align-items: center;
   margin-top: 2rem;
 }
 .projetos_h3 {
@@ -642,15 +643,20 @@ Projetos
 }
 .projetos_li {
   list-style-type: none;
-  border: var(--clr-grey-2) 1px solid;
-  border-radius: 20px;
-  padding: 1.2rem 1rem;
+  border: var(--clr-grey-3) 0.5px solid;
+  /* border-left: var(--clr-grey-2) 1px solid;
+  border-right: var(--clr-grey-2) 1px solid; */
+  /*  border-radius: 20px; */
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  width: 20rem;
-  margin: 1rem 1rem;
+  width: 80%;
+  /* margin: 1rem 1rem; */
   align-items: center;
-  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
+  /*  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444); */
+}
+.projetos_li:hover {
+  background-color: var(--clr-blue-1);
 }
 .projetos_titulo {
   font-size: 1.5rem;
@@ -659,152 +665,9 @@ Projetos
   font-size: 1.2rem;
   color: var(--clr-grey-7);
 }
-
-/*
-=============== 
-Informações
-===============
-*/
-
-.info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: show 1.5s ease-in-out 1;
+.primeiro_li {
+  border-top: var(--clr-grey-2) 1px solid;
 }
-
-.info div {
-  border: solid var(--clr-blue-2) 1px;
-  height: 33vh;
-  width: 25%;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 4rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.info__h3 {
-  font-family: Montserrat;
-  font-weight: 700;
-  color: var(--clr-blue-7);
-  font-size: 2.5rem;
-  animation: show 1.5s ease-in-out 1;
-}
-
-#projetos {
-  background-image: url("img/projetos.jpg"); /* Replace 'your-image-url.jpg' with the actual URL of your image */
-  background-size: cover; /* Adjust the background size to cover the entire div */
-  background-position: 10% 30%; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the background image */
-  position: relative;
-}
-
-#projetos:hover::after,
-#conhecimentos:hover::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(64, 175, 249, 0.444);
-  border-radius: 20px;
-}
-
-#conhecimentos {
-  background-image: url("img/livros_dois.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-#projetos:hover,
-#conhecimentos:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
-}
-
-#projetos:hover h3,
-#conhecimentos:hover h3 {
-  color: var(--clr-blue-5);
-}
-
-@media screen and (max-width: 1800px) {
-  /* .contato {
-    background-color: var(--clr-orange-5);
-  } */
-
-  main {
-    height: 100%;
-  }
-
-  .contato {
-    height: 4rem;
-  }
-
-  .info__h3 {
-    font-size: 2.2rem;
-  }
-
-  .info div {
-    margin: 2rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  /*  .contato {
-    background-color: var(--clr-green-5);
-  } */
-  .info {
-    flex-direction: column;
-  }
-
-  .info div {
-    height: 27vh;
-    width: 70%;
-    border-radius: 10px;
-    margin: 2rem 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  main {
-    padding: 3rem 2rem;
-  }
-
-  /* .contato {
-    background-color: var(--clr-yellow-5);
-  } */
-  .header {
-    padding: 0;
-  }
-  .header__h1 {
-    font-size: 3rem;
-  }
-
-  .header__h2 {
-    font-size: 1.2rem;
-    margin: 1.5rem 0 0 0;
-  }
-
-  .info div {
-    height: 23vh;
-    width: 100%;
-    border-radius: 10px;
-    margin: 1.5rem 0;
-  }
-
-  .info__h3 {
-    font-size: 2rem;
-  }
-}
-
 /*
 =============== 
 Footer
