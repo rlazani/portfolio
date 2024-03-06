@@ -1,8 +1,8 @@
-import { dataProjetos } from "./data.js";
+import { dadosProjetos } from "./data.js";
 
 export class Model {
-  data;
+  dados;
   constructor() {
-    this.data = dataProjetos;
+    this.dados = dadosProjetos;
   }
 }

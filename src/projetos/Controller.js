@@ -8,7 +8,7 @@ export class ControllerProjetos {
   constructor() {
     // Model:
     const model = new Model();
-    this.dadosModel = model.data;
+    this.dadosModel = model.dados;
     // View:
     const view = new View(this.dadosModel);
   }

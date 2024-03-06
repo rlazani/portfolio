@@ -1,4 +1,4 @@
-const dataProjetos = [
+const dadosProjetos = [
   {
     titulo: "Observatório da Criança e Adolescente",
     descricao: "Desenvolvido com PHP e Jquery durante estágio na Unicamp",
@@ -27,4 +27,4 @@ const dataProjetos = [
   },
 ];
 
-export { dataProjetos };
+export { dadosProjetos };
