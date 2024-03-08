@@ -11,8 +11,13 @@ export class View {
       const { titulo, itens } = experiencia;
       return `
        
-         <li class="experiencia_li">
-              <strong>${titulo}:</strong> ${itens}
+             <li class="projetos_li">
+              <h3 class="projetos_titulo">
+            ${titulo}
+              </h3>
+              <p class="projetos_p">
+               ${itens}
+              </p>
             </li>
            
       `;

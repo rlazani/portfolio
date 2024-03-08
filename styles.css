@@ -192,102 +192,6 @@ Body
 ===============
 */
 
-/*
-=============== 
-Modal
-===============
-*/
-
-.modalProjetos,
-.modalConhecimentos {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100%;
-  background: rgba(73, 166, 233, 0.8);
-  z-index: 1;
-  padding: 5rem 2rem;
-}
-
-.inner-modal {
-  margin: 0 auto;
-  width: 80%;
-  background-color: transparent;
-}
-
-.blur {
-  filter: blur(20px);
-  opacity: 50%;
-  display: none;
-}
-
-.arrow__projetos,
-.arrow__conhecimentos {
-  color: var(--clr-white);
-  font-size: 1.5rem;
-  margin-left: 92%;
-  cursor: pointer;
-  /*  border: solid #d77206 1px; */
-  display: inline;
-  padding: 1rem;
-}
-
-/* Projetos */
-
-#display__projetos ul {
-  border-radius: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-#display__projetos ul > li {
-  border: var(--clr-blue-2) 1px solid;
-  border-radius: 20px;
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin: 1rem 1rem;
-}
-
-/* CONHECIMENTOS */
-
-#lista-conhecimentos {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.elemento-lista {
-  border: var(--clr-blue-2) 1px solid;
-  padding: 2rem;
-  width: 20%;
-  margin: 1rem;
-  border-radius: 10px;
-}
-
-.ul__conhecimentos {
-  display: flex;
-  flex-direction: column;
-}
-
-.ul__conhecimentos > li {
-  color: var(--clr-grey-8);
-  transition: all 0.3s ease-in-out;
-  animation: show 1.5s ease-in-out 1;
-}
-
-.visitar:hover {
-  opacity: 70%;
-  transform: translate(0px, -2px);
-  cursor: pointer;
-}
-
 .visitar {
   font-size: 0.9rem;
   transition: all 0.3s ease-in-out;
@@ -307,159 +211,6 @@ Modal
 .links {
   display: flex;
   align-items: center;
-}
-
-.modalProjetos p,
-.modalConhecimentos p {
-  color: var(--clr-grey-7);
-  font-size: 1.2rem;
-  transition: all 0.3s ease-in-out;
-  animation: show 1.5s ease-in-out 1;
-}
-
-.modalProjetos h3,
-.modalConhecimentos h3 {
-  color: var(--clr-white);
-  transition: all 0.3s ease-in-out;
-  animation: show 1.5s ease-in-out 1;
-}
-
-.hideProjetos,
-.hideConhecimentos {
-  display: none;
-}
-
-@media screen and (max-width: 1800px) {
-  .modalProjetos,
-  .modalConhecimentos {
-    width: 100%;
-    min-height: 100%;
-    padding: 5rem;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .modalProjetos,
-  .modalConhecimentos {
-    /* background-color: var(--clr-orange-9); */
-    padding: 2rem;
-  }
-
-  .inner-modal {
-    margin: 0 auto;
-    width: 100%;
-    background-color: transparent;
-  }
-
-  #display__projetos ul {
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  #display__projetos ul > li > h3 {
-    font-size: 1.5rem;
-  }
-
-  .elemento-lista {
-    border: var(--clr-blue-2) 1px solid;
-    padding: 2rem;
-    width: 30%;
-    margin: 1rem;
-    border-radius: 10px;
-    margin: 1rem auto;
-  }
-}
-
-@media screen and (max-width: 870px) {
-  .modalProjetos,
-  .modalConhecimentos {
-    /*   background-color: var(--clr-green-9); */
-    padding: 1rem 2rem;
-    height: auto;
-    position: static;
-    padding: 2rem 0rem;
-  }
-
-  .modalProjetos,
-  .modalConhecimentos h3 {
-    font-size: 1.6rem;
-  }
-
-  .arrow {
-    margin-left: 85%;
-  }
-
-  #display__projetos ul {
-    flex-direction: column;
-  }
-
-  #display__projetos ul > li {
-    width: 60%;
-    margin: 1rem 1rem;
-  }
-
-  /* Conhecimentos */
-
-  #lista-conhecimentos {
-    margin: 0 auto;
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    border: 1px solid var(--clr-orange-0);
-  }
-
-  .elemento-lista {
-    border: var(--clr-blue-2) 1px solid;
-    padding: 2rem;
-    width: 30%;
-    margin: 1rem;
-    border-radius: 10px;
-    margin: 1rem auto;
-  }
-
-  .ul__conhecimentos {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .ul__conhecimentos > li {
-    color: var(--clr-grey-8);
-    transition: all 0.3s ease-in-out;
-    animation: show 1.5s ease-in-out 1;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .modalProjetos,
-  .modalConhecimentos {
-    /*  background: var(--clr-brown-7); */
-    padding: 0;
-  }
-  #display__projetos ul li {
-    width: 80%;
-  }
-
-  .elemento-lista {
-    border: var(--clr-blue-2) 1px solid;
-    padding: 1rem;
-    width: 60%;
-    margin: 1rem;
-    border-radius: 10px;
-    margin: 1rem auto;
-  }
-
-  #lista-conhecimentos {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-  }
 }
 
 /*
@@ -588,16 +339,6 @@ Informações
   animation: show 1.5s ease-in-out 1;
 }
 
-.experiencia_ul {
-  list-style-type: none;
-  margin: 2rem 0rem;
-  border: var(--clr-grey-2) 1px solid;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
-  transition: all 0.3s ease-in-out;
-  animation: show 1.5s ease-in-out 1;
-}
-
 .experiencia_li {
   padding: 2rem 1rem;
   border-bottom: var(--clr-grey-2) 1px solid;
@@ -628,7 +369,8 @@ Projetos
   transition: all 0.3s ease-in-out;
   animation: show 1.5s ease-in-out 1;
 }
-.projetos_div {
+.projetos_div,
+.experiencia_ul {
   display: flex;
   flex-direction: column;
   /* flex-wrap: wrap; */
