@@ -208,6 +208,13 @@ Body
   margin-right: 2rem;
 }
 
+.visitar:hover {
+  color: var(--clr-blue-3);
+  transform: translate(0px, -2px);
+  border: solid var(--clr-blue-3) 1px;
+  cursor: pointer;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -224,7 +231,7 @@ Navegação / Contato
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6vh;
+  height: 4rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -233,7 +240,6 @@ Navegação / Contato
 }
 .contato__lista {
   display: flex;
-  /*   border: 1px solid white; */
   padding: 1rem;
   width: 20rem;
   justify-content: space-around;
@@ -246,7 +252,7 @@ Navegação / Contato
   animation: show 1.5s ease-in-out 1;
 }
 .social__icon:hover {
-  color: var(--clr-blue-2);
+  color: var(--clr-blue-3);
   transform: translate(0px, -2px);
 }
 .github {
@@ -283,7 +289,7 @@ main {
   );
 }
 .header {
-  padding: 3rem 0 1rem 0;
+  padding: 5rem 0 0rem 0;
 }
 .header__h1 {
   font-family: Montserrat;
@@ -305,7 +311,7 @@ main {
 .header__button {
   display: flex;
   align-items: center;
-  margin: 3rem auto;
+  margin: 3rem auto 0 auto;
   background-color: var(--clr-grey-3);
   border: solid var(--clr-grey-2) 1px;
   border-radius: 5px;
@@ -324,48 +330,12 @@ main {
 
 /*
 =============== 
-Informações
-===============
-*/
-.experiencia {
-  margin: 1.2rem auto 0 auto;
-}
-
-.experiencia_h3 {
-  color: var(--clr-blue-7);
-  font-size: 1.7rem;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-  animation: show 1.5s ease-in-out 1;
-}
-
-.experiencia_li {
-  padding: 2rem 1rem;
-  border-bottom: var(--clr-grey-2) 1px solid;
-  color: #555;
-  font-size: 1.2rem;
-}
-.ultimo_li {
-  border-bottom: none;
-}
-
-li strong {
-  font-weight: bold;
-}
-.experiencia_li:hover {
-  background-color: var(--clr-blue-1);
-  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444);
-}
-
-/*
-=============== 
-Projetos
+Caixas
 ===============
 */
 
-.projetos {
-  margin: 6rem auto 0 auto;
-  /* width: 80%; */
+.caixa {
+  margin: 0rem auto 0 auto;
   transition: all 0.3s ease-in-out;
   animation: show 1.5s ease-in-out 1;
 }
@@ -373,43 +343,41 @@ Projetos
 .experiencia_ul {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
 }
-.projetos_h3 {
+.caixa_h3 {
   color: var(--clr-blue-7);
   font-size: 2rem;
   font-weight: 600;
+  margin-top: 6rem;
 }
-.projetos_li {
+.caixa_li {
   list-style-type: none;
   border: var(--clr-grey-3) 0.5px solid;
-  /* border-left: var(--clr-grey-2) 1px solid;
-  border-right: var(--clr-grey-2) 1px solid; */
-  /*  border-radius: 20px; */
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  /* margin: 1rem 1rem; */
+  width: 60rem;
   align-items: center;
-  /*  box-shadow: 0 5px 10px rgba(161, 162, 163, 0.444); */
 }
-.projetos_li:hover {
+.caixa_li:hover {
   background-color: var(--clr-blue-1);
 }
-.projetos_titulo {
+.caixa_titulo {
   font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--clr-grey-8);
 }
-.projetos_p {
+.caixa_p {
   font-size: 1.2rem;
   color: var(--clr-grey-7);
 }
 .primeiro_li {
   border-top: var(--clr-grey-2) 1px solid;
 }
+
 /*
 =============== 
 Footer
@@ -420,4 +388,17 @@ footer {
   height: 3rem;
   background-color: var(--clr-blue-5);
   width: 100%;
+}
+
+@media only screen and (max-width: 1500px) {
+  .projetos_div,
+  .caixa_h3 {
+    font-size: 1.8rem;
+  }
+  .caixa_li {
+    width: 100%;
+  }
+  .header__h1 {
+    font-size: 3rem;
+  }
 }

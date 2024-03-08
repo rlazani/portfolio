@@ -11,11 +11,11 @@ export class View {
       const { titulo, itens } = experiencia;
       return `
        
-             <li class="projetos_li">
-              <h3 class="projetos_titulo">
+             <li class="caixa_li">
+              <h3 class="caixa_titulo">
             ${titulo}
               </h3>
-              <p class="projetos_p">
+              <p class="caixa_p">
                ${itens}
               </p>
             </li>

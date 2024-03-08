@@ -11,11 +11,11 @@ export class View {
       const { titulo, descricao, link, github } = projeto;
       return `
        
-         <li class="projetos_li">
-              <h3 class="projetos_titulo">
+         <li class="caixa_li">
+              <h3 class="caixa_titulo">
             ${titulo}
               </h3>
-              <p class="projetos_p">
+              <p class="caixa_p">
                ${descricao}
               </p>
               <div class="links">
